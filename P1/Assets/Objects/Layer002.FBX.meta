@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 8352f04f6bf69ce40958c47c7d934c6c
+timeCreated: 1477915423
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: DeltaRune-Cirkel
+    100002: DeltaRune-Driehoek-LinksBoven
+    100004: DeltaRune-Driehoek-Onder
+    100006: DeltaRune-Driehoek-RechtsBoven
+    100008: Diagonaal-Balk-Links
+    100010: Diagonaal-Balk-Rechts
+    100012: Horizontaal-Rand-Achter
+    100014: Horizontaal-Rand-Links001
+    100016: Horizontaal-Rand-Rechts
+    100018: Horizontaal-Rand-RechtsVoor
+    100020: Horizontaal-Rand-VoorkantLinks
+    100022: //RootNode
+    400000: DeltaRune-Cirkel
+    400002: DeltaRune-Driehoek-LinksBoven
+    400004: DeltaRune-Driehoek-Onder
+    400006: DeltaRune-Driehoek-RechtsBoven
+    400008: Diagonaal-Balk-Links
+    400010: Diagonaal-Balk-Rechts
+    400012: Horizontaal-Rand-Achter
+    400014: Horizontaal-Rand-Links001
+    400016: Horizontaal-Rand-Rechts
+    400018: Horizontaal-Rand-RechtsVoor
+    400020: Horizontaal-Rand-VoorkantLinks
+    400022: //RootNode
+    2300000: DeltaRune-Cirkel
+    2300002: DeltaRune-Driehoek-LinksBoven
+    2300004: DeltaRune-Driehoek-Onder
+    2300006: DeltaRune-Driehoek-RechtsBoven
+    2300008: Diagonaal-Balk-Links
+    2300010: Diagonaal-Balk-Rechts
+    2300012: Horizontaal-Rand-Achter
+    2300014: Horizontaal-Rand-Links001
+    2300016: Horizontaal-Rand-Rechts
+    2300018: Horizontaal-Rand-RechtsVoor
+    2300020: Horizontaal-Rand-VoorkantLinks
+    2300022: //RootNode
+    3300000: DeltaRune-Cirkel
+    3300002: DeltaRune-Driehoek-LinksBoven
+    3300004: DeltaRune-Driehoek-Onder
+    3300006: DeltaRune-Driehoek-RechtsBoven
+    3300008: Diagonaal-Balk-Links
+    3300010: Diagonaal-Balk-Rechts
+    3300012: Horizontaal-Rand-Achter
+    3300014: Horizontaal-Rand-Links001
+    3300016: Horizontaal-Rand-Rechts
+    3300018: Horizontaal-Rand-RechtsVoor
+    3300020: Horizontaal-Rand-VoorkantLinks
+    3300022: //RootNode
+    4300000: Layer002
+    4300002: Diagonaal-Balk-Links
+    4300004: Diagonaal-Balk-Rechts
+    4300006: Horizontaal-Rand-Links001
+    4300008: Horizontaal-Rand-Rechts
+    4300010: Horizontaal-Rand-Achter
+    4300012: Horizontaal-Rand-RechtsVoor
+    4300014: Horizontaal-Rand-VoorkantLinks
+    4300016: DeltaRune-Driehoek-RechtsBoven
+    4300018: DeltaRune-Driehoek-LinksBoven
+    4300020: DeltaRune-Driehoek-Onder
+    4300022: DeltaRune-Cirkel
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
