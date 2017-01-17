@@ -38,5 +38,9 @@ public class Controller : MonoBehaviour {
 
         cc.SimpleMove(speed);
 
+        if (Input.GetButtonDown("Jump"))
+        {
+
+        }
 	}
 }

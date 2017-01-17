@@ -21,10 +21,11 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 spawnPosition = spawnPoint.transform.position;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Spawn"))
         {
             RandomNumber();
             spawnPoint.transform.position = new Vector3(random1, 1.2f, random3);
+
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
 
         }
