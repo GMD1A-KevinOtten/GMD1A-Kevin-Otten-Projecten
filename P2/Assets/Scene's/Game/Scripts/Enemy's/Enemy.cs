@@ -12,12 +12,15 @@ public class Enemy : MonoBehaviour {
 
     void Start()
     {
-        GameObject canvasObject = GameObject.FindWithTag("Canvas");
-        if (canvasObject != null)
-        {
-            script = canvasObject.GetComponent<ScoreManager>();
-        }
-        if (script == null)
+        //volg player target asing
+        player = GameObject.FindGameObjectWithTag("Player");                // asign player to gameobject
+        target = player.transform;                                          // asign component transform of player to target
+
+        //score manger connecten
+        GameObject canvasObject = GameObject.FindWithTag("Canvas");         // maak gameobject var aan en asign het canvas daar aan
+        script = canvasObject.GetComponent<ScoreManager>();                 // asing script op script var
+        
+        if (script == null)                                                 // als script niks heeft geeft die in de log een message
         {
             Debug.Log("Cannot find 'Score' script");
         }
@@ -36,8 +39,6 @@ public class Enemy : MonoBehaviour {
 
 	void Update ()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        target = player.transform;
         float movement = speed * Time.deltaTime * 2;
         transform.position = Vector3.MoveTowards(transform.position, target.position, movement);
 

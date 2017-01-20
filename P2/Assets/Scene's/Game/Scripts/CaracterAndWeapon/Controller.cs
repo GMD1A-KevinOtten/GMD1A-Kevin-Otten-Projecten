@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour {
 	void Start ()
     {
         Screen.lockCursor = true;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,6 +37,9 @@ public class Controller : MonoBehaviour {
         CharacterController cc = GetComponent<CharacterController>();
 
         cc.SimpleMove(speed);
+
+
+
 
         if (Input.GetButtonDown("Jump"))
         {
