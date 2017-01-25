@@ -7,7 +7,7 @@ public class ShootingRayCast : MonoBehaviour {
     RaycastHit hit;
 
     // variables voor reloading
-    public int maxAmmo = 20;
+    public int maxAmmo = 30;
     public int ammo;
     public float reloadTime = 2;
     public bool reloading;
@@ -48,7 +48,7 @@ public class ShootingRayCast : MonoBehaviour {
         //schieten
         Debug.DrawRay(transform.position, transform.forward * 100, Color.red);
 
-        if (Input.GetMouseButtonDown(0) && ammo > 0 && reloading == false)
+        if (Input.GetMouseButton(0) && ammo > 0 && reloading == false)
         {
 
             ammo -= 1;

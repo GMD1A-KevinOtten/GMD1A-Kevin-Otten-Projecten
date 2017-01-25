@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-    public int hp = 3;
+    public int hp = 2;
     public int points = 10;
     private ScoreManager script;
     private Transform target;
