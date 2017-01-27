@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public EnemySpawner spawnScript;
+    public Spawner spawnScript;
+    public MenuManager menuScript;
     public static GameManager gm;
 	
-
-
 
 	void Start ()
     {
@@ -26,8 +25,9 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-
-       
+        //assing het script zodat de game scene geladen kan worden
+        GameObject menuManager = GameObject.FindWithTag("MenuManager");
+        menuScript = menuManager.GetComponent<MenuManager>();
     }
 	
 	
@@ -36,20 +36,30 @@ public class GameManager : MonoBehaviour {
 		// spawned enmy door link met ander script
         if(Input.GetButtonDown("Spawn"))
         {
-            spawnScript.Spawner();
+            spawnScript.EnemySpawner();
         }
-
     }
 
-    
-    public void SceneManager ()
-    {
-
-    }
-
+    // om scripts te refrence in verschilende scene's
     public void OnLevelWasLoaded()
     {
-        GameObject enemySpawner = GameObject.FindWithTag("EnemySpawner");
-        spawnScript = enemySpawner.GetComponent<EnemySpawner>();
+        //assing de spawner in game scene zodat enemy's kunnen spawnen met de game manager
+        GameObject SpawnPoint = GameObject.FindWithTag("SpawnPoint");
+        spawnScript = SpawnPoint.GetComponent<Spawner>();
+        
+        //assign het script zodat als we terug naar menu gaan het nogsteeds geconnect kan worden
+        GameObject menuManager = GameObject.FindWithTag("MenuManager");
+        menuScript = menuManager.GetComponent<MenuManager>();
+    }
+
+    //menu buttons
+    public void StartButton()
+    {
+        menuScript.OnGameStart();
+    }
+
+    public void StopButton()
+    {
+        menuScript.OnGameClosed();
     }
 }

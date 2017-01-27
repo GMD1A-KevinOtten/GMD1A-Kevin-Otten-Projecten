@@ -7,7 +7,7 @@ public class ShootingRayCast : MonoBehaviour {
     RaycastHit hit;
 
     // variables voor reloading
-    public int maxAmmo = 30;
+    public int maxAmmo = 10;
     public int ammo;
     public float reloadTime = 2;
     public bool reloading;
@@ -15,6 +15,7 @@ public class ShootingRayCast : MonoBehaviour {
 
     void Start()
     {
+        ammoCount = GameObject.Find("AmmoCount").GetComponent<Text>();
         reloading = false;
         ammo = maxAmmo;
         ammoCount.text = "Ammo: " + ammo;
@@ -48,7 +49,7 @@ public class ShootingRayCast : MonoBehaviour {
         //schieten
         Debug.DrawRay(transform.position, transform.forward * 100, Color.red);
 
-        if (Input.GetMouseButton(0) && ammo > 0 && reloading == false)
+        if (Input.GetMouseButtonDown(0) && ammo > 0 && reloading == false)
         {
 
             ammo -= 1;
