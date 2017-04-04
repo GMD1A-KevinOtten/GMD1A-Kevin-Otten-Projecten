@@ -43,7 +43,5 @@ public class InteractionScript : MonoBehaviour
         movement.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         UIManager.pannel = UIManager.Pannel.Main;
-        cm.CurrentConversationInput(null);
-        
     }
 }
