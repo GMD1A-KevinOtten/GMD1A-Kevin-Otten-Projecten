@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour {
     public Text conversationText;
     public Text leftButton;
     public Text rightButton;
+    public Text nameText;
 
     public static Pannel pannel;
     public GameObject main;
@@ -71,5 +72,10 @@ public class UIManager : MonoBehaviour {
     public void RightButton(string rB)
     {
         rightButton.text = "" + rB;
+    }
+
+    public void NameText(string name)
+    {
+        nameText.text = "" + name;
     }
 }

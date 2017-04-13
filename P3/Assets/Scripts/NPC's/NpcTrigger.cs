@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class NpcTrigger : MonoBehaviour {
+public class NpcTrigger : MonoBehaviour
+{
+    public EventManager eventManagerScript;
+    public int enter;
+    public int exit;
 
-    public UIManager ui;
-
-    IEnumerator OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        ui.PopUpTextInsert("Hey Over Here!");
-        yield return new WaitForSeconds(2);
-        ui.PopUpTextInsert("");
+        if(enter >= 0)
+        {
+            eventManagerScript.TriggerInsert(this);
+            eventManagerScript.EventEnter();
+        }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        if(exit >= 0)
+        {
+            eventManagerScript.TriggerInsert(this);
+            eventManagerScript.EventExit();
+        }
+    } 
 }

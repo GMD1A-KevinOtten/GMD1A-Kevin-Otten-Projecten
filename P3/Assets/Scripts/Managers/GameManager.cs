@@ -7,27 +7,21 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager gm;
 
-
     void Start ()
     {
         DontDestroyOnLoad(transform.gameObject);
 
-        if (gm == null)
+        if(gm == null)
         {
             gm = this;
         }
 
-        else if (gm != this)
+        else if(gm != this)
         {
             Destroy(gameObject);
         }
     }
 	
-	void Update ()
-    {
-		
-	}
-
     public static void ChanceLevel(int i)
     {
         SceneManager.LoadScene(i, LoadSceneMode.Single);

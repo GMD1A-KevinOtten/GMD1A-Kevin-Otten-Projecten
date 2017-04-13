@@ -8,5 +8,11 @@ public class Conversation : MonoBehaviour {
 
     public List<string> ant = new List<string>();
 
-    public string Quest;
+    public string objective;
+
+    public string name;
+
+    public int objectiveIndex;
+
+    public bool talkedTo;
 }
