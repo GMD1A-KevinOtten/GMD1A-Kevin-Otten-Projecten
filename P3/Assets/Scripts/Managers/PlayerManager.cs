@@ -6,24 +6,30 @@ public class PlayerManager : MonoBehaviour {
 
     public MovementController movement;
     public ConversationManager cm;
+    public UIManager ui;
     public GameObject mainCam;
     public GameObject cinCam;
     bool camara = true;
 
+    // set de settings voor een conversation triggerd door het interaction script of andere triggers
     public void SetConversationSettings(GameObject npc)
     {
         MovementOnOf();
         CursorOnOf();
         UIManager.pannel = UIManager.Pannel.Conversation;
+        ui.PannelOnOff();
         cm.CurrentConversationInput(npc.GetComponent<Conversation>());
     }
 
+    // set de settings vooor een conversation terug naar de normaale gameplay settings
     public void RevertConversationSettings()
     {
         MovementOnOf();
         UIManager.pannel = UIManager.Pannel.Main;
+        ui.PannelOnOff();
     }
 
+    // zet de movement uit als die voorheen aan is en andersom
     public void MovementOnOf()
     {
         if (movement.enabled == true)
@@ -36,6 +42,7 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    // zet de cursor unlocked als die locked is en andersom
     public void CursorOnOf()
     {
         if(Cursor.lockState == CursorLockMode.Locked)
@@ -48,6 +55,7 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    // switcht de camaras van de huidige main naar de cinematic camara en andersom
     public void CamaraOnOf()
     {
         if(camara == true)

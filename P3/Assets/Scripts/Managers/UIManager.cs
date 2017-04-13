@@ -12,22 +12,24 @@ public class UIManager : MonoBehaviour {
         Conversation
     }
 
-    //Main Pannel Text
+    //Main Pannel var
     public Text huidigeObjective;
     public Text popUpText;
     public Text interactionText;
+    public bool mainPannel = true;
 
-    //Conversation Pannel Text
+    //Conversation Pannel var
     public Text conversationText;
     public Text leftButton;
     public Text rightButton;
     public Text nameText;
 
+    //Enum related var
     public static Pannel pannel;
     public GameObject main;
     public GameObject conv;
 
-    void Update()
+    public void PannelOnOff()
     {
         if(pannel == Pannel.Conversation)
         {
@@ -56,6 +58,22 @@ public class UIManager : MonoBehaviour {
     public void InteractionText(string interact)
     {
         interactionText.text = "" + interact;
+    }
+
+    public void MainPannelOffOnn()
+    {
+        if(mainPannel == true)
+        {
+            main.SetActive(false);
+            mainPannel = false;
+            print("eyy");
+        }
+
+        else
+        {
+            main.SetActive(true);
+            mainPannel = true;
+        }
     }
 
     //Conversation Pannel

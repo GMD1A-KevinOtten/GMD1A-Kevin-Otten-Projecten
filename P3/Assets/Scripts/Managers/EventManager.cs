@@ -53,6 +53,7 @@ public class EventManager : MonoBehaviour
     // event voor de exit van een trigger
     public void EventExit()
     {
+        // NPC1
         if(currentTrigger.exit == 1)
         {
             if(firstGoodby == true)
@@ -61,7 +62,7 @@ public class EventManager : MonoBehaviour
                 firstGoodby = false;
             }
         }
-
+        //NPC2
         if(currentTrigger.exit == 2 && obj.objectives[1] == true && eventNPV2ExitDone != true)
         {
             StartCoroutine(EventNPC2Exit(20));
@@ -82,13 +83,15 @@ public class EventManager : MonoBehaviour
             ui.PopUpTextInsert("");
     }
 
-    //coroutine voor NPC2 Trigger
+    //coroutine voor NPC2 Trigger (activeerd Cutscene en kapt die af na (zie input van TriggerExit NPC2) bepaalde tijd en gaat terug naar first person vieuw)
     IEnumerator EventNPC2Exit(float i)
     {
+        ui.MainPannelOffOnn();
         pm.MovementOnOf();
         pm.CamaraOnOf();
         camaraMovement = true;
         yield return new WaitForSeconds(i);
+        ui.MainPannelOffOnn();
         camaraMovement = false;
         pm.CamaraOnOf();
         pm.MovementOnOf();

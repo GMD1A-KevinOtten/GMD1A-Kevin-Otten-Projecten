@@ -8,6 +8,8 @@ public class InteractionScript : MonoBehaviour
     RaycastHit npc;
     public PlayerManager pM;
     public UIManager uiManager;
+
+    //het interaction systeem dat de info van het object met een conversation scripts doorstuurt naar de playermanager
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward * 2, Color.red);
