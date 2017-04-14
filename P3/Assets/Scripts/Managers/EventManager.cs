@@ -91,6 +91,7 @@ public class EventManager : MonoBehaviour
         pm.CamaraOnOf();
         camaraMovement = true;
         yield return new WaitForSeconds(i);
+        obj.ObjectiveUpdate("Escape the sity");
         ui.MainPannelOffOnn();
         camaraMovement = false;
         pm.CamaraOnOf();

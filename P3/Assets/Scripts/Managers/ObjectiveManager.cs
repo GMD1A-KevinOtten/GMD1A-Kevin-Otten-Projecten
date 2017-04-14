@@ -26,7 +26,11 @@ public class ObjectiveManager : MonoBehaviour {
     //update Quest Text Ui
     public void ObjectiveUpdate(string objective)
     {
-        if(objective != null)
+        if(string.IsNullOrEmpty(objective))
+        {
+            
+        }
+        else
         {
             ui.QuestInsert(objective);
         }

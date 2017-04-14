@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour {
     //Main Pannel
     public void QuestInsert(string quest)
     {
-        huidigeObjective.text = "" + quest;
+        huidigeObjective.text = quest;
     }
 	
     public void PopUpTextInsert(string popup)
