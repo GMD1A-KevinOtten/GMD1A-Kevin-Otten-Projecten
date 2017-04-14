@@ -6,7 +6,6 @@ public class ObjectiveManager : MonoBehaviour {
 
     public List<bool> objectives = new List<bool>();
     public UIManager ui;
-    public static string currentObjective;
 
     //Initial Objective
     void Start()

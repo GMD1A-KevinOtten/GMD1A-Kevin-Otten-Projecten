@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour {
     public GameObject main;
     public GameObject conv;
 
+    //verandert pannel van de 1 naar de ander
     public void PannelOnOff()
     {
         if(pannel == Pannel.Conversation)
@@ -59,14 +60,13 @@ public class UIManager : MonoBehaviour {
     {
         interactionText.text = "" + interact;
     }
-
+    //aan uit knop voor main pannel in geval van bijf een cutscene
     public void MainPannelOffOnn()
     {
         if(mainPannel == true)
         {
             main.SetActive(false);
             mainPannel = false;
-            print("eyy");
         }
 
         else

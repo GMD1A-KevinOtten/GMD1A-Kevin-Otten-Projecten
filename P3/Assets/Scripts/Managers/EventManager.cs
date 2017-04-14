@@ -10,12 +10,13 @@ public class EventManager : MonoBehaviour
     public ObjectiveManager obj;
     public PlayerManager pm;
     public NpcTrigger currentTrigger;
-    public bool firstContact = true;
-    public bool firstGoodby = true;
     public GameObject target;
+    public GameObject invisibleStopWall;
     public bool camaraMovement;
     public bool eventNPV2ExitDone;
-    public GameObject invisibleStopWall;
+    public bool firstContact = true;
+    public bool firstGoodby = true;
+    
 
     // movement van een camara in 1  van de events
     void Update()

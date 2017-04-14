@@ -6,8 +6,7 @@ public class InteractionScript : MonoBehaviour
 {
 
     RaycastHit npc;
-    public PlayerManager pM;
-    public UIManager uiManager;
+    public PlayerManager pm;
 
     //het interaction systeem dat de info van het object met een conversation scripts doorstuurt naar de playermanager
     void Update()
@@ -16,17 +15,17 @@ public class InteractionScript : MonoBehaviour
 
         if(Physics.Raycast(transform.position, transform.forward, out npc, 2f) && npc.collider.GetComponent<Conversation>() != null)
         {
-            uiManager.InteractionText("Press E");
+            pm.InteractionText("Press E");
 
             if(Input.GetButtonDown("Interact"))
             {
-                pM.SetConversationSettings(npc.collider.gameObject);
+                pm.SetConversationSettings(npc.collider.gameObject);
             }
         }
 
         else
         {
-            uiManager.InteractionText("");
+            pm.InteractionText("");
         }
     }
 

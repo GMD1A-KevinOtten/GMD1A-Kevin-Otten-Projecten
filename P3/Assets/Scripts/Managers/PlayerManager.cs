@@ -11,6 +11,12 @@ public class PlayerManager : MonoBehaviour {
     public GameObject cinCam;
     bool camara = true;
 
+    public void InteractionText(string interaction)
+    {
+        ui.InteractionText(interaction);
+    }
+    
+    
     // set de settings voor een conversation triggerd door het interaction script of andere triggers
     public void SetConversationSettings(GameObject npc)
     {
