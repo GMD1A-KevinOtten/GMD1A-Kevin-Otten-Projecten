@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    public float movementSpeed = 6;
+    public Animator pa;
+    public float movementSpeed;
     public float mouseSensitivity = 10.0f;
     public float upDownRange = 60.0f;
     float verticalRotation = 0;
@@ -31,5 +32,15 @@ public class MovementController : MonoBehaviour
 
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
         transform.Translate(Vector3.right * sideSpeed * Time.deltaTime);
+
+        if(forwardSpeed == 0 && sideSpeed == 0)
+        {
+            pa.SetBool("Walking", false);
+        }
+        else
+        {
+            pa.SetBool("Walking", true);
+        }
+        
     }
 }

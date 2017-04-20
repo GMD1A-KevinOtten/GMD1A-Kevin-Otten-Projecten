@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour {
     public UIManager ui;
     public GameObject mainCam;
     public GameObject cinCam;
+    public Animator pa;
     bool camara = true;
 
     public void InteractionText(string interaction)
@@ -25,6 +26,7 @@ public class PlayerManager : MonoBehaviour {
         UIManager.pannel = UIManager.Pannel.Conversation;
         ui.PannelOnOff();
         cm.CurrentConversationInput(npc.GetComponent<Conversation>());
+        pa.SetBool("Walking", false);
     }
 
     // set de settings vooor een conversation terug naar de normaale gameplay settings
