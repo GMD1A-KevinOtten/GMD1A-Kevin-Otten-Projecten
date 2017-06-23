@@ -18,6 +18,7 @@ public class InventoryScript : MonoBehaviour {
         InvSpaceUpdate();
     }
 
+    //stopt informatie in de itemslots en de sprites
     public void PutInInv(ItemHolder itemholder)
     {
         int index;

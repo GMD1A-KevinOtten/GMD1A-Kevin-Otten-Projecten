@@ -7,7 +7,7 @@ public class ItemSlot{
 
     public Item item;
 
-    public GameObject sprite; 
+    public GameObject sprite;
 
     public int slotStack;
     public string slotItemName;
@@ -19,5 +19,6 @@ public class ItemSlot{
     public void SpriteUpdate()
     {
         sprite.GetComponent<Image>().sprite = item.imageItem;
+        sprite.GetComponent<Sprites>().myItem = this;
     }
 }

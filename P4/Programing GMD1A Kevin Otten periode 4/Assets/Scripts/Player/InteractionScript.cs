@@ -15,7 +15,7 @@ public class InteractionScript : MonoBehaviour
 
         if(Physics.Raycast(transform.position, transform.forward, out item, 2f) && item.collider.tag == "Item")
         {
-            pm.InteractionText("Press E To Pick Up");
+            pm.InteractionText("Press E To Pick Up The " + item.collider.name);
 
             if(Input.GetButtonDown("Interact"))
             {
