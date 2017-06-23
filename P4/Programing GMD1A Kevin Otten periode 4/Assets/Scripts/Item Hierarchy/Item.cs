@@ -11,4 +11,6 @@ public class Item{
     public int stack;
     public GameObject obj;
     public UnityEngine.Sprite imageItem;
+    public string description;
+    public string stats;
 }

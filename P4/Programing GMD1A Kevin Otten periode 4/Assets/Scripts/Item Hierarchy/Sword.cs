@@ -6,7 +6,6 @@ public class Sword : Weapon
 {
     public void AssingStats()
     {
-        Debug.Log("works");
         itemName = "Sword";
         price = 11;
         weight = 5;
@@ -14,5 +13,8 @@ public class Sword : Weapon
         durability = 100;
         damage = 10;
         reach = 3;
+
+        description = "Many poeple say that this sword has bin used by king arthur himself\nEveryone ellse knows its just a sword";
+
     }
 }

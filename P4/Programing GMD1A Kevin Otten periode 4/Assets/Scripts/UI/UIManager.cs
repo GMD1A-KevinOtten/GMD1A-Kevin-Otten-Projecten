@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     public GameObject main;
     public GameObject inv;
     public UnityEngine.Sprite sword;
+    public Text description;
+    public Text statistics;
 
     //verandert pannel van de 1 naar de ander
     public void PannelOnOff()
@@ -42,5 +44,16 @@ public class UIManager : MonoBehaviour
     public void InteractionText(string interact)
     {
         interactionText.text = "" + interact;
+    }
+
+    //Inventory Pannel
+    public void DescriptionTextUpdate(string descText)
+    {
+        description.text = descText;
+    }
+
+    public void StatsTextUpdate(string stats)
+    {
+        statistics.text = stats;
     }
 }

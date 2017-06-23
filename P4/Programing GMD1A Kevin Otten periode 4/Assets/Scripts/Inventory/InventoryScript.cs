@@ -39,9 +39,21 @@ public class InventoryScript : MonoBehaviour {
         for (int i = 0; i < invSpace; i++)
         {
             slots.Add(new ItemSlot());
+            slots[i].inv = this;
             slots[i].sprite = Instantiate(slotSprite, new Vector3(0, 0, 0), Quaternion.identity);
             currentSlot = slots[i].sprite;
             currentSlot.transform.SetParent(invPanel);
         }
+    }
+
+    //Extra stap op info door te stuuren
+    public void SendDescriptionInfo(string descinfo)
+    {
+        ui.DescriptionTextUpdate(descinfo);
+    }
+
+    public void SendStatisticsInfo(string stats)
+    {
+        ui.StatsTextUpdate(stats);
     }
 }

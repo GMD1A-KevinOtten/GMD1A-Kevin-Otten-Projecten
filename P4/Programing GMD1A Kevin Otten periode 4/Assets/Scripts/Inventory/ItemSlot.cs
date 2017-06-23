@@ -8,7 +8,7 @@ public class ItemSlot{
     public Item item;
 
     public GameObject sprite;
-
+    public InventoryScript inv;
     public int slotStack;
     public string slotItemName;
     public int slotPrice;
@@ -20,5 +20,19 @@ public class ItemSlot{
     {
         sprite.GetComponent<Image>().sprite = item.imageItem;
         sprite.GetComponent<Sprites>().myItem = this;
+    }
+
+    public void DescriptionUpdate(string desc)
+    {
+        if(desc != null)
+        {
+            inv.SendDescriptionInfo(desc);
+            Debug.Log("itemslot");
+        } 
+    }
+
+    public void StatsUpdate(string stats)
+    {
+        inv.SendStatisticsInfo(stats);
     }
 }
